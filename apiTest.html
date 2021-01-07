@@ -101,7 +101,7 @@
 
       /**
        * Print the names and majors of students in a sample spreadsheet:
-       * https://docs.google.com/spreadsheets/d/18YytJZ0mrlmoFeoT-juteB5pyIHixNYfFrAQjXyMKeQ/edit#gid=0
+       * https://docs.google.com/spreadsheets/d/1H93svdAMQEhx2yW2Npzua-UdnmPCnUHra9YnRcQYc_k/edit#gid=0
        */
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
@@ -114,7 +114,8 @@
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
-              appendPre(row[0] + ', ' + row[4]);
+              if(row[3] == "CA"){
+              appendPre(row[0] + ', ' + row[4]);}
             }
           } else {
             appendPre('No data found.');
