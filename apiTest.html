@@ -110,12 +110,13 @@
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
-            appendPre('Name, Major:');
+            appendPre('Name, State:');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
-              if(row[3] == "CA"){
-              appendPre(row[0] + ', ' + row[4]);}
+              if(row[3].equals("CA")){
+                appendPre(row[0] + ', ' + row[3]);
+              }
             }
           } else {
             appendPre('No data found.');
