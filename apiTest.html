@@ -106,16 +106,16 @@
       function listMajors() {
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-          range: 'Class Data!A2:E',
+          range: 'Class Data!A2:G',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
-            appendPre('Name, State:');
+            appendPre('Sorting by GPA less than 3:');
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
-              if(row[3] == "CA"){
-                appendPre(row[0] + ', ' + row[3]);
+              if(row[6] < 3){
+                appendPre(row[0] + ', ' + row[6]);
               }
             }
           } else {
