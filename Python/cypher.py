@@ -78,3 +78,5 @@ elif enOrDe.lower() == "d":
         word[j] = switch_decrypt(word[j])
         str2 += word[j]
     print(str2)
+
+input()
