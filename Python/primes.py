@@ -16,3 +16,4 @@ while j <= num:
         primeList.append(testNum)
     j +=1
 print(primeList)    
+input()

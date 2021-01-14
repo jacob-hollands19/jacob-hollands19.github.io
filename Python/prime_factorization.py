@@ -19,3 +19,4 @@ if n > 1:
     factorization.append(n)
 
 print(factorization)
+input()

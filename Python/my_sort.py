@@ -28,5 +28,5 @@ def my_sort(inList):
 my_sort(inList)
 print(inList)
 
-
+input()
 

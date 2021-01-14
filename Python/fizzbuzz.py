@@ -9,3 +9,4 @@ while i <= 100:
     else:
         print(str(i))
     i += 1
+input()

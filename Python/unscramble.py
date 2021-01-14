@@ -6,3 +6,4 @@ for x in f:
     x = x.strip()
     if len(str1) == len(x) and set(str1) == set(x):
         print(x)
+input()
