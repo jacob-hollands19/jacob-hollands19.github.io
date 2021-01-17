@@ -18,3 +18,8 @@
 #         current +=1
 #     print(running_fact)
 # factorial(end)
+def test():
+    exit
+print("hello")
+test()
+input()
