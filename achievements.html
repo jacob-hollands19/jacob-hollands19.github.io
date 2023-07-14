@@ -1,103 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+
+  function hideDivsOnRefresh() {
+    var divs = document.querySelectorAll('[id*="CityDiv"]');
+    divs[0].style.display = 'block';
+
+    for (var i = 1; i < divs.length; i++) {
+      divs[i].style.display = 'none';
+    }
+  }
+
+  window.addEventListener('load', hideDivsOnRefresh);
+
+  function changeAchievementContent(contentId) {
+    var contentElement = document.getElementById(contentId);
+    var contentElements = document.querySelectorAll('[id*="CityDiv"]');
+    console.log(contentElements);
+    for (var i = 0; i < contentElements.length; i++) {
+      contentElements[i].style.display = 'none';
+    }
+
+    contentElement.style.display = 'block';
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/27f7f41dfe.js" crossorigin="anonymous"></script>
+
 <head>
-<title>Jason Smith | Services</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
-<!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+  <title>Jason Smith | Services</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+  <!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
 </head>
+
 <body id="page2">
-<div class="extra">
-<!--==============================header=================================-->
-<header>
-  <div class="main">
-    <div class="border-top">
-      <div class="wrapper">
-        <h1><a href="index.html">Burlington Mayor Steve Sexton</a></h1>
-        <nav>
-          <ul class="menu">
-            <li><a href="index.html">About</a></li>
-            <li><a class="active" href="achievements.html">Achievements</a></li>
-            <li><a href="goals.html">Future Goals</a></li>
-            <li><a href="endorsments.html">Endorsments</a></li>
-            <li class="last-item"><a href="contacts.html">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="slider-bg">
-      <div class="slider">
-        <div class="banner"> <strong class="title-1">REALIZE</strong> <span class="text-1">your constitutional right for qualified</span> <a class="link" href="#">legal help</a> </div>
-      </div>
-    </div>
-  </div>
-</header>
-  <!--==============================content================================-->
-  <section id="content">
-    <div class="main">
-      <div class="container_12">
-        <div class="wrapper">
-          <article class="grid_4">
-            <div class="indent2">
-              <h4>Our Services</h4>
-              <div class="wrapper border-bot prev-indent-bot2">
-                <figure class="img-indent2"><img src="images/page2-img1.png" alt=""></figure>
-                <div class="extra-wrap">
-                  <h6 class="reg">vero accusamus</h6>
-                  Nam libero tempore cumsuta <a class="link" href="#">[...]</a> </div>
-              </div>
-              <div class="wrapper border-bot prev-indent-bot2">
-                <figure class="img-indent2"><img src="images/page2-img2.png" alt=""></figure>
-                <div class="extra-wrap">
-                  <h6 class="reg">Nobis est eligendi</h6>
-                  Optio cumque nihil impedit <a class="link" href="#">[...]</a> </div>
-              </div>
-              <div class="wrapper border-bot prev-indent-bot2">
-                <figure class="img-indent2"><img src="images/page2-img3.png" alt=""></figure>
-                <div class="extra-wrap">
-                  <h6 class="reg">Quminusid quodi</h6>
-                  Maxime placeat posimus <a class="link" href="#">[...]</a> </div>
-              </div>
-              <div class="wrapper border-bot prev-indent-bot2">
-                <figure class="img-indent2"><img src="images/page2-img4.png" alt=""></figure>
-                <div class="extra-wrap">
-                  <h6 class="reg">omnis voluptas</h6>
-                  Assumenda est omnis dolor <a class="link" href="#">[...]</a> </div>
-              </div>
-              <div class="wrapper">
-                <figure class="img-indent2"><img src="images/page2-img5.png" alt=""></figure>
-                <div class="extra-wrap">
-                  <h6 class="reg">Temporibus autem </h6>
-                  Quibusdam officiis debitis <a class="link" href="#">[...]</a> </div>
-              </div>
-            </div>
-          </article>
-          <article class="grid_8">
-            <div class="indent-left">
-              <h3>About Our Services</h3>
-              <h6>At vero eos et accusamus</h6>
-              <p class="indent-bot">Lusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum.</p>
-              <h6>Dolorum fugat harum quidem </h6>
-              <p class="img-indent-bot">Rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
-              <h6>Temporibus autem </h6>
-              Quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis. </div>
-          </article>
+  <div class="extra">
+    <!--==============================header=================================-->
+    <header>
+      <div class="main">
+        <div class="border-top">
+          <div class="wrapper">
+            <h1><a href="index.html">Burlington Mayor Steve Sexton</a></h1>
+            <nav>
+              <ul class="menu">
+                <li><a href="index.html">About</a></li>
+                <li><a class="active" href="achievements.html">Achievements</a></li>
+                <li><a href="goals.html">Future Goals</a></li>
+                <li><a href="endorsments.html">Endorsments</a></li>
+                <li class="last-item"><a href="contacts.html">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div >
+          <div class="slider-ach">
+            <div class="banner-ach-text">ACHIEVEMENTS
+          </div>
         </div>
       </div>
-    </div>
-    <div class="block"></div>
-  </section>
-</div>
-<!--==============================footer=================================-->
-<footer>
-  <div class="main">
-    <div class="footer-bg">
-      <div class="aligncenter">Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved<br>
-        Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></div>
-    </div>
+    </header>
+    <!--==============================content================================-->
+    <section id="content">
+      <div class="main">
+        <div class="container_12">
+          <div class="wrapper">
+            <article class="grid_4">
+              <div class="indent2">
+                <h4>Achievements</h4>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Thriving</h4>
+                    <a class="link" href="#"
+                      onclick="changeAchievementContent('ThrivingCityDiv')">A Thriving City </a>
+                  </div>
+                </div>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Growth</h4>
+                    <a class="link" href="#"
+                      onclick="changeAchievementContent('GrowingCityDiv')">A Growing City</a>
+                  </div>
+                </div>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Citizen Saftey</h4>
+                    <a class="link" href="#" onclick="changeAchievementContent('SafeCityDiv')">A Safe City</a>
+                  </div>
+                </div>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Combating Homelessness</h4>
+                    <a class="link" href="#"
+                      onclick="changeAchievementContent('Homeless-lessCityDiv')">Combating Homelessness </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="grid_8">
+
+              <div class="indent-left indent-top">
+                <div id="ThrivingCityDiv">
+                  <h4>A Thriving City</h4>
+                  <p class="indent-bot">The City of Burlington is experiencing a stable financial status, thanks to the
+                    prosperous businesses that have been contributing to record-breaking sales tax revenues the last few
+                    years combined with underspending of the city budget. The current sales tax revenue is on track to
+                    set
+                    another record, while the reserve account balances are at an all-time high level, making the future
+                    of
+                    the city secure. Later this year, I will again present a balanced budget to the Council with no
+                    increase in property tax rates. </p>
+                </div>
+                <div id="GrowingCityDiv">
+                  <h4>A Growing City</h4>
+                  <p class="img-indent-bot">Burlington is currently seeing an unprecedented rise in mixed-use projects
+                    that combine commercial spaces with multi-family housing. In the last 4 years, 32% of Skagit
+                    County's
+                    population growth has been in Burlington due to the construction of these new projects. With larger
+                    projects currently underway, we can expect this growth to continue in the coming years. It is a
+                    source
+                    of immense pride when builders and developers express interest in taking on more projects in
+                    Burlington.
+                    However, this growth also poses a challenge to city services, especially our traffic system. If we
+                    continue to grow without proper planning and improvements to traffic flow, the weak spots in our
+                    current system will only worsen.
+                    <strong>Unfortunately, my opponent has hindered our progress by voting against a $1.7 million grant that the
+                    city had received to improve the George Hopper/I-5 interchange, an area heavily impacted by growth.</strong>
+                  </p>
+                </div>
+                <div id="SafeCityDiv">
+                  <h4>Citizen Saftey</h4>
+                  <p class="img-indent-bot">The Burlington Police Department, along with other departments in Washington
+                    State, is experiencing a
+                    shortage of personnel. However, we stand firm in maintaining our high standards despite a decline in
+                    both the quantity and quality of applications. Our commitment to professionalism and safety is
+                    reflected
+                    in the fact that in the past 12 years, we have responded to over 120,000 service calls without
+                    receiving
+                    a single complaint of excessive force. To address the staffing shortage in 2022, I brought to
+                    Council a
+                    bonus payment initiative to incentivize experienced officers to transfer to our city. This program
+                    has
+                    enabled us to hire 6 experienced officers at a budgetary savings of approximately $480,000 if we had
+                    been able to hire new officers.
+                    We will continue to utilize this program as an effective tool to fulfill our staffing needs while
+                    preserving our standards. <Strong>Conversely, my opponent voted against accepting a grant we had
+                      been
+                      awarded that would have funded 2 officers.</Strong>
+
+                    In the upcoming months, I will ask for the Council's approval of a plan I previously introduced to
+                    them.
+                    The plan involves the City of Burlington contributing $100,000 to the Skagit County Sheriff's
+                    Office.
+                    The funds will go towards supporting the Skagit County Inter-Agency Drug Unit. This contribution is
+                    necessary, as our officer assigned to the unit has moved out of state to continue their career in
+                    law
+                    enforcement. Until we can assign another officer to the unit, the budgeted amount for the officer
+                    will
+                    serve as a contribution. It recognizes the level of service provided to the City of Burlington by
+                    SCIDU
+                    in combating not only drug crimes but a wide range of other serious infractions.
+                  </p>
+                </div>
+                <div id="Homeless-lessCityDiv">
+                  <h4>Combating Homelessness</h4>
+                  <p class="img-indent-bot"> <strong>Despite my opponent's objections and consistent votes against
+                      it,</strong> I
+                    successfully established the Skagit First Step Center in partnership with Skagit County and other
+                    cities in 2021. The SFSC, situated on Pease Rd. in Burlington, includes 45 "cabins" and a large
+                    building that offers crucial services. Residents can stay for up to 90 days, and the center records
+                    an average of nearly 15,000 bed nights including nearly 500 law enforcement drop-offs annually. This
+                    initiative has helped individuals who would have otherwise been sleeping in our public spaces,
+                    sidewalks, or parks.
+                    Thanks to the partnership with other cities and the county, I managed to set up the SFSC without
+                    utilizing Burlington General Fund dollars for construction or operations. Despite this, my opponent
+                    still voted against the establishment of the SFSC, and even dubbed it a "failure".
+                    While the SFSC has achieved its intended purpose of getting individuals off the streets and
+                    providing them with basic social services, it has brought to light a county-wide need for
+                    transitional housing that has existed for years.
+                    With this in mind, we have developed initial designs for a renovated facility at the SFSC site. This
+                    new facility would offer longer-term transitional housing and additional social services, all in one
+                    location. In this legislative climate, there are multiple grant funding opportunities for the
+                    construction of such a facility.
+
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="block"></div>
+    </section>
   </div>
-</footer>
+  <!--==============================footer=================================-->
+  <footer>
+    <div class="main">
+      <div class="footer-bg">
+        <div class="aligncenter">Copyright &copy; <a href="#">Steve Sexton</a> All Rights Reserved<br>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

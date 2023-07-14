@@ -285,6 +285,32 @@ h1 a {
 	overflow:hidden;
 }
 
+/* .slider-bg-achievements {
+	width:960px;
+	height:279px;
+	padding:0 10px 42px 10px;
+	background:url(../images/flag-banner.jpg) 0 0 no-repeat;
+} */
+
+.slider-ach{
+	background-image: url("../images/flag-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	width:960px;
+	height:279px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-ach-text{
+	text-align: center;
+	color: white;
+	font-size: 75px;
+	background-color: rgb(0, 0, 75, .9); /* Faint blue background */
+	padding: 40px 40px; /* Adjust padding as needed */
+}
+
 #page1 .slider {
 	height:399px;
 	background:url(../images/steve_sexton.jpg) 1px 0 no-repeat;
