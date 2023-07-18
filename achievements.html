@@ -3,11 +3,16 @@
 <script>
 
   function hideDivsOnRefresh() {
+    var fragmentIdentifier = window.location.hash;
     var divs = document.querySelectorAll('[id*="CityDiv"]');
-    divs[0].style.display = 'block';
-
-    for (var i = 1; i < divs.length; i++) {
+    for (var i = 0; i < divs.length; i++) {
       divs[i].style.display = 'none';
+    }
+    if(fragmentIdentifier){
+      document.querySelectorAll('[id*="' + fragmentIdentifier.substring(1, fragmentIdentifier.length) + '"]')[0].style.display = 'block';
+    }
+    else{
+      divs[0].style.display = 'block';
     }
   }
 
@@ -16,7 +21,6 @@
   function changeAchievementContent(contentId) {
     var contentElement = document.getElementById(contentId);
     var contentElements = document.querySelectorAll('[id*="CityDiv"]');
-    console.log(contentElements);
     for (var i = 0; i < contentElements.length; i++) {
       contentElements[i].style.display = 'none';
     }

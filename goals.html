@@ -1,101 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+
+  function hideDivsOnRefresh() {
+    var fragmentIdentifier = window.location.hash;
+    var divs = document.querySelectorAll('[id*="GoalDiv"]');
+    for (var i = 0; i < divs.length; i++) {
+      divs[i].style.display = 'none';
+    }
+    if (fragmentIdentifier) {
+      document.querySelectorAll('[id*="' + fragmentIdentifier.substring(1, fragmentIdentifier.length) + '"]')[0].style.display = 'block';
+    }
+    else {
+      divs[0].style.display = 'block';
+    }
+  }
+
+  window.addEventListener('load', hideDivsOnRefresh);
+
+  function changePageContent(contentId) {
+    var contentElement = document.getElementById(contentId);
+    var contentElements = document.querySelectorAll('[id*="GoalDiv"]');
+    for (var i = 0; i < contentElements.length; i++) {
+      contentElements[i].style.display = 'none';
+    }
+
+    contentElement.style.display = 'block';
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/27f7f41dfe.js" crossorigin="anonymous"></script>
+
 <head>
-<title>Jason Smith | Areas</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
-<!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+  <title>Jason Smith | Services</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+  <!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
 </head>
-<body id="page3">
-<div class="extra">
- <!--==============================header=================================-->
- <header>
-  <div class="main">
-    <div class="border-top">
-      <div class="wrapper">
-        <h1><a href="index.html">Burlington Mayor Steve Sexton</a></h1>
-        <nav>
-          <ul class="menu">
-            <li><a href="index.html">About</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a class="active" href="goals.html">Future Goals</a></li>
-            <li><a href="endorsments.html">Endorsments</a></li>
-            <li class="last-item"><a href="contacts.html">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div >
-      <div class="slider-ach">
-        <div class="banner-ach-text">FUTURE GOALS
-      </div>
-    </div>
-  </div>
-</header>
-  <!--==============================content================================-->
-  <section id="content">
-    <div class="main">
-      <div class="container_12">
-        <div class="wrapper p3">
-          <article class="grid_8">
-            <div class="indent-left">
-              <h3>Private Practice</h3>
-              <h6 class="reg p1">Lusto odio dignissimos ducimus qui blanditiis praesentium</h6>
-              <div class="wrapper border-bot prev-indent-bot2"> <span class="circle">1</span>
-                <div class="extra-wrap"> Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum. Rerum facilis est et expedita distinctio. <a class="link" href="#">Read More</a> </div>
-              </div>
-              <div class="wrapper"> <span class="circle">2</span>
-                <div class="extra-wrap"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. <a class="link" href="#">Read More</a> </div>
-              </div>
-            </div>
-          </article>
-          <article class="grid_4">
-            <div class="indent2"> <a href="#"><img src="images/banner-1.jpg" alt=""></a> </div>
-          </article>
-        </div>
-        <aside>
+
+<body id="page2">
+  <div class="extra">
+    <!--==============================header=================================-->
+    <header>
+      <div class="main">
+        <div class="border-top">
           <div class="wrapper">
-            <article class="grid_8">
-              <div class="indent-left">
-                <h4>About Our Practice</h4>
-                <div class="wrapper prev-indent-bot2">
-                  <figure class="img-indent img-border"><img src="images/page3-img1.jpg" alt=""></figure>
-                  <div class="extra-wrap"> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis. </div>
-                </div>
-                Est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus. </div>
-            </article>
+            <h1><a href="index.html">Burlington Mayor Steve Sexton</a></h1>
+            <nav>
+              <ul class="menu">
+                <li><a href="index.html">About</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a class="active" href="goals.html">Future Goals</a></li>
+                <li><a href="endorsments.html">Endorsments</a></li>
+                <li class="last-item"><a href="contacts.html">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <div class="slider-ach">
+            <div class="banner-ach-text">FUTURE GOALS
+            </div>
+          </div>
+        </div>
+    </header>
+    <!--==============================content================================-->
+    <section id="content">
+      <div class="main">
+        <div class="container_12">
+          <div class="wrapper">
             <article class="grid_4">
-              <div class="indent-left">
-                <h4>Practice of Law</h4>
-                <p class="prev-indent-bot2">Sed ut perspiciatis unde omnis iste natus<br>
-                  error sit voluptatem acusantium aperiam doloremque laudantium.</p>
-                <p class="p1">Totam rem aperiam, eaque ipsa quae ab illo inventore:</p>
-                <ul class="list-2">
-                  <li><a href="#">At vero eos et accusamus et iusto</a></li>
-                  <li><a href="#">Odio dignissimos ducimus</a></li>
-                  <li><a href="#">Blanditiis praesentium voluptatum</a></li>
-                  <li><a href="#">Deleniti atque corrupti quos</a></li>
-                  <li><a href="#">Rolores et quas molestias excepturi</a></li>
-                </ul>
+              <div class="indent2 indent-top">
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Cascade Mall</h4>
+                    <a class="link" href="#" onclick="changePageContent('MallGoalDiv')">A Thriving City </a>
+                  </div>
+                </div>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Rotary Park</h4>
+                    <a class="link" href="#" onclick="changePageContent('RotaryGoalDiv')">A Growing City</a>
+                  </div>
+                </div>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Maiben and Boerner Parks</h4>
+                    <a class="link" href="#" onclick="changePageContent('ParksGoalDiv')">A Safe City</a>
+                  </div>
+                </div>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Police and Fire/EMS</h4>
+                    <a class="link" href="#" onclick="changePageContent('EMSGoalDiv')">
+                      Police and Fire/EMS </a>
+                  </div>
+                </div>
+                <div class="wrapper border-bot prev-indent-bot2">
+                  <figure class="img-indent2"><i class="fa-solid fa-star"></i></figure>
+                  <div class="extra-wrap">
+                    <h4 class="reg">Transportation</h4>
+                    <a class="link" href="#" onclick="changePageContent('TransportationGoalDiv')">
+                      Transportation </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="grid_8">
+
+              <div class="indent-left indent-top">
+                <div id="MallGoalDiv">
+                  <h4>Cascade Mall</h4>
+                  <p class="indent-bot"><strong>Continue to work with the new owner of the Cascade Mall:</strong> I
+                    would like to share
+                    that the City staff and I recently had meetings with the new owner of both the Cascade Mall and
+                    Burlington Plaza, formerly known as Outlet Mall. It is encouraging that the new owner of these of
+                    these two properties, which hold significant economic importance for not just the City of Burlington
+                    but also Skagit County, is making their redevelopment a priority. The ownership's investment and
+                    plan to revamp both properties reflect their confidence in the City of Burlington. </p>
+                </div>
+                <div id="RotaryGoalDiv">
+                  <h4>Rotary Park</h4>
+                  <p class="img-indent-bot">The playground will be another first for the City of Burlington parks
+                    system. It will provide an opportunity for children of all abilities to play and enjoy their time in
+                    one of their city parks. The City of Burlington has recently been awarded a $500,000 grant to go
+                    towards this park. We plan on starting construction in 2024 on this playground.
+                  </p>
+                </div>
+                <div id="ParksGoalDiv">
+                  <h4>Maiben and Boerner Parks</h4>
+                  <p class="img-indent-bot">The City of Burlington is currently developing a plan to enhance Maiben Park
+                    and gathering feedback from the neighboring residents of Boerner Park to determine the amenities
+                    they would prefer to have. I firmly believe that improving Boerner Park is crucial since a
+                    significant number of children in that vicinity reside in apartments, making it essential to have
+                    accessible outdoor play areas.
+                  </p>
+                </div>
+                <div id="EMSGoalDiv">
+                  <h4>Police and Fire/EMS</h4>
+                  <p class="img-indent-bot">As part of the North Star Leadership Team, we are in the process of
+                    implementing a county-wide program that involves embedding social workers within law enforcement
+                    agencies and community paramedics within Fire/EMS departments. This initiative aims to provide
+                    better assistance to individuals in our community who may be homeless or dealing with mental health
+                    or substance abuse issues. By doing so, we hope to reduce the number of people ending up in
+                    emergency rooms or our county jail, and instead, connect them with the appropriate facilities to
+                    receive the care they need.
+                    Additionally, this program will benefit Fire/EMS services by working with frequent users of 911 and
+                    Fire/EMS services. The inclusion of a medic with social service skills is expected to decrease the
+                    number of calls for services, allowing for more resources to be allocated to higher acuity calls.
+
+
+                  </p>
+                </div>
+                <div id="TransportationGoalDiv">
+                  <h4>Transportation</h4>
+                  <p class="img-indent-bot">The Mayor of Mount Vernon, staff members, and I have recently met with
+                    executives from Burlington Northern Santa Fe railroad to discuss the replacement of the rail bridge
+                    between our two cities. The proposed plan entails the removal of two at-grade rail crossings on each
+                    side of the bridge, with the introduction of under-crossings or over-crossings. The entire project
+                    would be grant-funded, meaning that no city funds would be required. This project would offer
+                    several benefits, including improved flood protection, less congestion, improved traffic flow, and
+                    enhanced public safety with reduced response times from first responders. Thanks to the recent $2
+                    million grant from the Federal Government, we can start planning for this project.
+
+
+                  </p>
+                </div>
               </div>
             </article>
           </div>
-        </aside>
+        </div>
       </div>
-    </div>
-    <div class="block"></div>
-  </section>
-</div>
-<!--==============================footer=================================-->
-<footer>
-  <div class="main">
-    <div class="footer-bg">
-      <div class="aligncenter">Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved<br>
-        Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></div>
-    </div>
+      <div class="block"></div>
+    </section>
   </div>
-</footer>
+  <!--==============================footer=================================-->
+  <footer>
+    <div class="main">
+      <div class="footer-bg">
+        <div class="aligncenter">Copyright &copy; <a href="#">Steve Sexton</a> All Rights Reserved<br>
+        </div>
+      </div>
+  </footer>
 </body>
+
 </html>
