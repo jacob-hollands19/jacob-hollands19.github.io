@@ -420,6 +420,21 @@ h1 a {
 	align-items: center;
 }
 
+.slider-re-elect {
+	background-image: url("../images/re-elect.jpg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: -11%;
+	margin-left: 10%;
+}
+
+
 .slider-ach img {
 	position: relative;
 	top: 10px;
